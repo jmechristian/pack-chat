@@ -5,8 +5,8 @@ type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <header className='w-full sticky top-0 z-10 bg-dark'>
-      <div className='px-6 h-16 flex justify-between align-middle items-center border-b border-highlight'>
+    <header className='w-full sticky top-0 z-10 bg-dark drop-shadow-lg'>
+      <div className='px-6 h-16 flex justify-between align-middle items-center '>
         <div>
           <Bars3Icon className='w-6 h-6 stroke-white' />
         </div>
@@ -15,7 +15,7 @@ const Header = (props: Props) => {
           <UserCircleIcon className='w-6 h-6 stroke-white' />
         </div>
       </div>
-      <div className='px-6 h-12 flex justify-center align-middle items-center border-b border-highlight bg-gray-800'>
+      <div className='px-6 h-12 flex justify-center align-middle items-center  bg-gray-800'>
         <div className='text-gray-500 font-headline text-xl'>#Channel Name</div>
       </div>
     </header>
