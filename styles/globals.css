@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* html,
+html,
 body {
   height: 100%;
-} */
+}
 
-body {
+.bg_gradient {
   background-image: url('/images/packchat_background.png');
   background-size: cover;
   background-position: center center;
