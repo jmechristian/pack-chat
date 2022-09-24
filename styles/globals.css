@@ -2,15 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
+/* html,
 body {
   height: 100%;
-}
+} */
 
 body {
   background-image: url('/images/packchat_background.png');
   background-size: cover;
-  background-position: center 80%;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 #__next {

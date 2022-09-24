@@ -4,9 +4,9 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div className='w-full h-full relative'>
       <Header />
-      <div>{children}</div>
+      {children}
       <Footer />
     </div>
   );
