@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import MobileMenu from '../MobileMenu';
+import MobileMenu from '../MobileMenu/MobileMenu';
 import { useCycle } from 'framer-motion';
 
 const Layout = ({ children }) => {
