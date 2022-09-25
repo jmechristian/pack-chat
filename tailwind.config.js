@@ -5,6 +5,9 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
+    fontFamily: {
+      sans: 'IBM Plex Sans, sans-serif',
+    },
     extend: {
       fontFamily: {
         plex: 'IBM Plex Sans, sans-serif',
@@ -18,5 +21,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms')],
 };
