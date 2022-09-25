@@ -1,15 +1,13 @@
 import React from 'react';
 import { Bars3Icon, UserCircleIcon } from '@heroicons/react/24/outline';
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = ({ toggle }) => {
   return (
     <header className='w-full sticky top-0 z-10 bg-dark drop-shadow-lg'>
-      <div className='px-6 h-16 flex justify-between align-middle items-center '>
-        <div>
-          <Bars3Icon className='w-6 h-6 stroke-white' />
-        </div>
+      <div className='px-6 h-20 flex justify-between align-middle items-center '>
+        <button onClick={toggle}>
+          <Bars3Icon className='w-6 h-6 stroke-white cursor-pointer' />
+        </button>
         <div className='font-headline text-orange-500 text-xl'>PackChat</div>
         <div>
           <UserCircleIcon className='w-6 h-6 stroke-white' />

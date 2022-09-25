@@ -9,11 +9,11 @@ type Props = {};
 
 const Post = (props: Props) => {
   return (
-    <div className='bg-body w-full p-6 flex flex-col gap-2 rounded-xl my-6'>
+    <div className='bg-body w-full py-7 px-6 flex flex-col gap-2 rounded-xl my-6'>
       <div className='text-sm text-gray-600'>
         Posted by <strong>Jamie Christian</strong> 6 Hours ago
       </div>
-      <div className='text-bodyLight text-2xl font-headline mb-4'>
+      <div className='text-bodyLight text-2xl font-headline mb-2'>
         This is the Title of the First User Post.
       </div>
       <div className='text-gray-400 font-plex text-base'>
