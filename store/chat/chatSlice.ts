@@ -3,10 +3,12 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 
 export interface PostFormState {
   value: boolean;
+  channel?: string;
 }
 
 const initialState: PostFormState = {
   value: false,
+  channel: 'packaging management',
 };
 
 export const chatSlice = createSlice({

@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { closePostForm } from '../../store/chat/chatSlice';
+import { RootState } from '../../store/store';
 
 const MobilePostForm = () => {
   const [postTitle, setPostTitle] = useState('');
   const [postContent, setPostContent] = useState('');
 
   const dispatch = useDispatch();
+
+  const channel = useSelector((state: RootState) => state.chat.channel);
 
   const addPostHandler = (event: React.MouseEvent) => {
     event.preventDefault();
@@ -30,9 +33,7 @@ const MobilePostForm = () => {
         <div className='flex justify-between items-end w-full flex-wrap mb-2'>
           <div className='font-headline text-3xl text-bodyLight'>Add Post</div>
           <div className='bg-body rounded-md'>
-            <div className='py-1 px-2 text-gray-500 text-sm'>
-              #Automotive Packaging
-            </div>
+            <div className='py-1 px-2 text-gray-500 text-sm'>#{channel}</div>
           </div>
         </div>
         <div className='w-full'>
