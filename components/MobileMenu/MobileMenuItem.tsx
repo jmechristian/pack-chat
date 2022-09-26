@@ -5,7 +5,7 @@ interface MobileMenuItemProps {
 }
 
 const MobileMenuItem = ({ name }: MobileMenuItemProps) => {
-  return <div className='font-plex text-gray-600'>#{name}</div>;
+  return <div className='font-plex text-gray-600'># {name}</div>;
 };
 
 export default MobileMenuItem;

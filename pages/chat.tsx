@@ -12,7 +12,7 @@ const Chat = () => {
     <>
       <Layout>
         <MainContainer />
-        {openMobileForm && <MobilePostForm />}
+        <MobilePostForm />
       </Layout>
     </>
   );

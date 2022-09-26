@@ -9,7 +9,7 @@ const MobileMenu = ({ isOpen, close }) => {
       clipPath: 'circle(141% at 0 0)',
       transition: {
         duration: 0.3,
-        staggerChildren: 2,
+        staggerChildren: 1,
       },
     },
     closed: {
@@ -22,7 +22,7 @@ const MobileMenu = ({ isOpen, close }) => {
       opacity: 1,
       transition: {
         duration: 0.5,
-        delay: 0.1,
+        delay: 0.2,
       },
     },
     closed: {

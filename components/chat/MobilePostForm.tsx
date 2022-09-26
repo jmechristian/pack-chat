@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { closePostForm } from '../../store/chat/chatSlice';
 import { RootState } from '../../store/store';
+import { motion } from 'framer-motion';
 
 const MobilePostForm = () => {
   const [postTitle, setPostTitle] = useState('');
@@ -9,7 +10,7 @@ const MobilePostForm = () => {
 
   const dispatch = useDispatch();
 
-  const channel = useSelector((state: RootState) => state.chat.channel);
+  const { channel, value } = useSelector((state: RootState) => state.chat);
 
   const addPostHandler = (event: React.MouseEvent) => {
     event.preventDefault();
@@ -27,13 +28,47 @@ const MobilePostForm = () => {
     dispatch(closePostForm());
   };
 
+  const variants = {
+    open: {
+      clipPath: 'circle(141% at 50% 100%)',
+      transition: {
+        duration: 0.3,
+        staggerChildren: 1,
+      },
+    },
+    closed: {
+      clipPath: 'circle(0% at 50% 100%)',
+    },
+  };
+
+  const itemVariants = {
+    open: {
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        delay: 0.2,
+      },
+    },
+    closed: {
+      opacity: 0,
+    },
+  };
+
   return (
-    <div className='bg-dark w-full h-screen fixed top-0 left-0 z-50'>
-      <div className='flex flex-col w-full h-full justify-start items-center p-7 gap-12'>
+    <motion.div
+      className='bg-dark w-full h-screen fixed top-0 left-0 z-50'
+      initial={false}
+      animate={value ? 'open' : 'closed'}
+      variants={variants}
+    >
+      <motion.div
+        className='flex flex-col w-full h-full justify-start items-center p-7 gap-12'
+        variants={itemVariants}
+      >
         <div className='flex justify-between items-end w-full flex-wrap mb-2'>
           <div className='font-headline text-3xl text-bodyLight'>Add Post</div>
           <div className='bg-body rounded-md'>
-            <div className='py-1 px-2 text-gray-500 text-sm'>#{channel}</div>
+            <div className='py-1 px-2 text-gray-500 text-sm'># {channel}</div>
           </div>
         </div>
         <div className='w-full'>
@@ -83,8 +118,8 @@ const MobilePostForm = () => {
             </div>
           </button>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
