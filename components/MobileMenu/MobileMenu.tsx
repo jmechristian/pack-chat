@@ -54,19 +54,19 @@ const MobileMenu = ({ isOpen, close }) => {
             <div className='font-bold font-plex text-bodyLight text-xl'>
               <div>Certifications</div>
             </div>
-            <MobileMenuItem name='Packaging Management' />
-            <MobileMenuItem name='Packaging Science' />
-            <MobileMenuItem name='Automotive Packaging' />
+            <MobileMenuItem name='Packaging Management' close={close} />
+            <MobileMenuItem name='Packaging Science' close={close} />
+            <MobileMenuItem name='Automotive Packaging' close={close} />
           </div>
           <div className='w-full flex flex-col mt-12 gap-2 ml-4'>
             <div className='font-bold font-plex text-bodyLight text-xl'>
               <div>Courses</div>
             </div>
-            <MobileMenuItem name='Material' />
-            <MobileMenuItem name='Industry' />
-            <MobileMenuItem name='Food and Beverage' />
-            <MobileMenuItem name='Supply Chain and Logistics' />
-            <MobileMenuItem name='Design' />
+            <MobileMenuItem name='Material' close={close} />
+            <MobileMenuItem name='Industry' close={close} />
+            <MobileMenuItem name='Food and Beverage' close={close} />
+            <MobileMenuItem name='Supply Chain and Logistics' close={close} />
+            <MobileMenuItem name='Design' close={close} />
           </div>
         </motion.div>
       </motion.div>

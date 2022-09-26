@@ -21,9 +21,12 @@ export const chatSlice = createSlice({
     closePostForm: (state) => {
       state.value = false;
     },
+    setChannel: (state, action) => {
+      state.channel = action.payload;
+    },
   },
 });
 
-export const { openPostForm, closePostForm } = chatSlice.actions;
+export const { openPostForm, closePostForm, setChannel } = chatSlice.actions;
 
 export default chatSlice.reducer;
