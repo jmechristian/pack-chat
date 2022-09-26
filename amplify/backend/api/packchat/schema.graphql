@@ -12,7 +12,7 @@ type Channel @model {
 type Post @model {
   id: ID!
   title: String!
-  blog: Blog @belongsTo
+  channel: Channel @belongsTo
   content: String!
   comments: [Comment] @hasMany
   upvote: Int!

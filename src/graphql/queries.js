@@ -1,18 +1,21 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getBlog = /* GraphQL */ `
-  query GetBlog($id: ID!) {
-    getBlog(id: $id) {
+export const getChannel = /* GraphQL */ `
+  query GetChannel($id: ID!) {
+    getChannel(id: $id) {
       id
       name
       posts {
         items {
           id
           title
+          content
+          upvote
+          downvote
           createdAt
           updatedAt
-          blogPostsId
+          channelPostsId
         }
         nextToken
       }
@@ -21,13 +24,13 @@ export const getBlog = /* GraphQL */ `
     }
   }
 `;
-export const listBlogs = /* GraphQL */ `
-  query ListBlogs(
-    $filter: ModelBlogFilterInput
+export const listChannels = /* GraphQL */ `
+  query ListChannels(
+    $filter: ModelChannelFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listBlogs(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listChannels(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         name
@@ -46,7 +49,7 @@ export const getPost = /* GraphQL */ `
     getPost(id: $id) {
       id
       title
-      blog {
+      channel {
         id
         name
         posts {
@@ -55,6 +58,7 @@ export const getPost = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      content
       comments {
         items {
           id
@@ -65,9 +69,11 @@ export const getPost = /* GraphQL */ `
         }
         nextToken
       }
+      upvote
+      downvote
       createdAt
       updatedAt
-      blogPostsId
+      channelPostsId
     }
   }
 `;
@@ -81,18 +87,21 @@ export const listPosts = /* GraphQL */ `
       items {
         id
         title
-        blog {
+        channel {
           id
           name
           createdAt
           updatedAt
         }
+        content
         comments {
           nextToken
         }
+        upvote
+        downvote
         createdAt
         updatedAt
-        blogPostsId
+        channelPostsId
       }
       nextToken
     }
@@ -105,18 +114,21 @@ export const getComment = /* GraphQL */ `
       post {
         id
         title
-        blog {
+        channel {
           id
           name
           createdAt
           updatedAt
         }
+        content
         comments {
           nextToken
         }
+        upvote
+        downvote
         createdAt
         updatedAt
-        blogPostsId
+        channelPostsId
       }
       content
       createdAt
@@ -137,9 +149,12 @@ export const listComments = /* GraphQL */ `
         post {
           id
           title
+          content
+          upvote
+          downvote
           createdAt
           updatedAt
-          blogPostsId
+          channelPostsId
         }
         content
         createdAt

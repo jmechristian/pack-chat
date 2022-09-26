@@ -1,18 +1,21 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateBlog = /* GraphQL */ `
-  subscription OnCreateBlog {
-    onCreateBlog {
+export const onCreateChannel = /* GraphQL */ `
+  subscription OnCreateChannel {
+    onCreateChannel {
       id
       name
       posts {
         items {
           id
           title
+          content
+          upvote
+          downvote
           createdAt
           updatedAt
-          blogPostsId
+          channelPostsId
         }
         nextToken
       }
@@ -21,18 +24,21 @@ export const onCreateBlog = /* GraphQL */ `
     }
   }
 `;
-export const onUpdateBlog = /* GraphQL */ `
-  subscription OnUpdateBlog {
-    onUpdateBlog {
+export const onUpdateChannel = /* GraphQL */ `
+  subscription OnUpdateChannel {
+    onUpdateChannel {
       id
       name
       posts {
         items {
           id
           title
+          content
+          upvote
+          downvote
           createdAt
           updatedAt
-          blogPostsId
+          channelPostsId
         }
         nextToken
       }
@@ -41,18 +47,21 @@ export const onUpdateBlog = /* GraphQL */ `
     }
   }
 `;
-export const onDeleteBlog = /* GraphQL */ `
-  subscription OnDeleteBlog {
-    onDeleteBlog {
+export const onDeleteChannel = /* GraphQL */ `
+  subscription OnDeleteChannel {
+    onDeleteChannel {
       id
       name
       posts {
         items {
           id
           title
+          content
+          upvote
+          downvote
           createdAt
           updatedAt
-          blogPostsId
+          channelPostsId
         }
         nextToken
       }
@@ -66,7 +75,7 @@ export const onCreatePost = /* GraphQL */ `
     onCreatePost {
       id
       title
-      blog {
+      channel {
         id
         name
         posts {
@@ -75,6 +84,7 @@ export const onCreatePost = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      content
       comments {
         items {
           id
@@ -85,9 +95,11 @@ export const onCreatePost = /* GraphQL */ `
         }
         nextToken
       }
+      upvote
+      downvote
       createdAt
       updatedAt
-      blogPostsId
+      channelPostsId
     }
   }
 `;
@@ -96,7 +108,7 @@ export const onUpdatePost = /* GraphQL */ `
     onUpdatePost {
       id
       title
-      blog {
+      channel {
         id
         name
         posts {
@@ -105,6 +117,7 @@ export const onUpdatePost = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      content
       comments {
         items {
           id
@@ -115,9 +128,11 @@ export const onUpdatePost = /* GraphQL */ `
         }
         nextToken
       }
+      upvote
+      downvote
       createdAt
       updatedAt
-      blogPostsId
+      channelPostsId
     }
   }
 `;
@@ -126,7 +141,7 @@ export const onDeletePost = /* GraphQL */ `
     onDeletePost {
       id
       title
-      blog {
+      channel {
         id
         name
         posts {
@@ -135,6 +150,7 @@ export const onDeletePost = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      content
       comments {
         items {
           id
@@ -145,9 +161,11 @@ export const onDeletePost = /* GraphQL */ `
         }
         nextToken
       }
+      upvote
+      downvote
       createdAt
       updatedAt
-      blogPostsId
+      channelPostsId
     }
   }
 `;
@@ -158,18 +176,21 @@ export const onCreateComment = /* GraphQL */ `
       post {
         id
         title
-        blog {
+        channel {
           id
           name
           createdAt
           updatedAt
         }
+        content
         comments {
           nextToken
         }
+        upvote
+        downvote
         createdAt
         updatedAt
-        blogPostsId
+        channelPostsId
       }
       content
       createdAt
@@ -185,18 +206,21 @@ export const onUpdateComment = /* GraphQL */ `
       post {
         id
         title
-        blog {
+        channel {
           id
           name
           createdAt
           updatedAt
         }
+        content
         comments {
           nextToken
         }
+        upvote
+        downvote
         createdAt
         updatedAt
-        blogPostsId
+        channelPostsId
       }
       content
       createdAt
@@ -212,18 +236,21 @@ export const onDeleteComment = /* GraphQL */ `
       post {
         id
         title
-        blog {
+        channel {
           id
           name
           createdAt
           updatedAt
         }
+        content
         comments {
           nextToken
         }
+        upvote
+        downvote
         createdAt
         updatedAt
-        blogPostsId
+        channelPostsId
       }
       content
       createdAt

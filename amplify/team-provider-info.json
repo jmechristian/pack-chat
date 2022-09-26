@@ -17,6 +17,14 @@
           "appId": "dt7ec3p34yv9z",
           "type": "manual"
         }
+      },
+      "auth": {
+        "packchat48f4ff21": {
+          "userPoolId": "us-east-1_4Yl6EqJIx",
+          "userPoolName": "packchat",
+          "webClientId": "1033p574cvdm37mgjfpi6kipva",
+          "nativeClientId": "1033p574cvdm37mgjfpi6kipva"
+        }
       }
     }
   }

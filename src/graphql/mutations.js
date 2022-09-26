@@ -1,21 +1,24 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createBlog = /* GraphQL */ `
-  mutation CreateBlog(
-    $input: CreateBlogInput!
-    $condition: ModelBlogConditionInput
+export const createChannel = /* GraphQL */ `
+  mutation CreateChannel(
+    $input: CreateChannelInput!
+    $condition: ModelChannelConditionInput
   ) {
-    createBlog(input: $input, condition: $condition) {
+    createChannel(input: $input, condition: $condition) {
       id
       name
       posts {
         items {
           id
           title
+          content
+          upvote
+          downvote
           createdAt
           updatedAt
-          blogPostsId
+          channelPostsId
         }
         nextToken
       }
@@ -24,21 +27,24 @@ export const createBlog = /* GraphQL */ `
     }
   }
 `;
-export const updateBlog = /* GraphQL */ `
-  mutation UpdateBlog(
-    $input: UpdateBlogInput!
-    $condition: ModelBlogConditionInput
+export const updateChannel = /* GraphQL */ `
+  mutation UpdateChannel(
+    $input: UpdateChannelInput!
+    $condition: ModelChannelConditionInput
   ) {
-    updateBlog(input: $input, condition: $condition) {
+    updateChannel(input: $input, condition: $condition) {
       id
       name
       posts {
         items {
           id
           title
+          content
+          upvote
+          downvote
           createdAt
           updatedAt
-          blogPostsId
+          channelPostsId
         }
         nextToken
       }
@@ -47,21 +53,24 @@ export const updateBlog = /* GraphQL */ `
     }
   }
 `;
-export const deleteBlog = /* GraphQL */ `
-  mutation DeleteBlog(
-    $input: DeleteBlogInput!
-    $condition: ModelBlogConditionInput
+export const deleteChannel = /* GraphQL */ `
+  mutation DeleteChannel(
+    $input: DeleteChannelInput!
+    $condition: ModelChannelConditionInput
   ) {
-    deleteBlog(input: $input, condition: $condition) {
+    deleteChannel(input: $input, condition: $condition) {
       id
       name
       posts {
         items {
           id
           title
+          content
+          upvote
+          downvote
           createdAt
           updatedAt
-          blogPostsId
+          channelPostsId
         }
         nextToken
       }
@@ -78,7 +87,7 @@ export const createPost = /* GraphQL */ `
     createPost(input: $input, condition: $condition) {
       id
       title
-      blog {
+      channel {
         id
         name
         posts {
@@ -87,6 +96,7 @@ export const createPost = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      content
       comments {
         items {
           id
@@ -97,9 +107,11 @@ export const createPost = /* GraphQL */ `
         }
         nextToken
       }
+      upvote
+      downvote
       createdAt
       updatedAt
-      blogPostsId
+      channelPostsId
     }
   }
 `;
@@ -111,7 +123,7 @@ export const updatePost = /* GraphQL */ `
     updatePost(input: $input, condition: $condition) {
       id
       title
-      blog {
+      channel {
         id
         name
         posts {
@@ -120,6 +132,7 @@ export const updatePost = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      content
       comments {
         items {
           id
@@ -130,9 +143,11 @@ export const updatePost = /* GraphQL */ `
         }
         nextToken
       }
+      upvote
+      downvote
       createdAt
       updatedAt
-      blogPostsId
+      channelPostsId
     }
   }
 `;
@@ -144,7 +159,7 @@ export const deletePost = /* GraphQL */ `
     deletePost(input: $input, condition: $condition) {
       id
       title
-      blog {
+      channel {
         id
         name
         posts {
@@ -153,6 +168,7 @@ export const deletePost = /* GraphQL */ `
         createdAt
         updatedAt
       }
+      content
       comments {
         items {
           id
@@ -163,9 +179,11 @@ export const deletePost = /* GraphQL */ `
         }
         nextToken
       }
+      upvote
+      downvote
       createdAt
       updatedAt
-      blogPostsId
+      channelPostsId
     }
   }
 `;
@@ -179,18 +197,21 @@ export const createComment = /* GraphQL */ `
       post {
         id
         title
-        blog {
+        channel {
           id
           name
           createdAt
           updatedAt
         }
+        content
         comments {
           nextToken
         }
+        upvote
+        downvote
         createdAt
         updatedAt
-        blogPostsId
+        channelPostsId
       }
       content
       createdAt
@@ -209,18 +230,21 @@ export const updateComment = /* GraphQL */ `
       post {
         id
         title
-        blog {
+        channel {
           id
           name
           createdAt
           updatedAt
         }
+        content
         comments {
           nextToken
         }
+        upvote
+        downvote
         createdAt
         updatedAt
-        blogPostsId
+        channelPostsId
       }
       content
       createdAt
@@ -239,18 +263,21 @@ export const deleteComment = /* GraphQL */ `
       post {
         id
         title
-        blog {
+        channel {
           id
           name
           createdAt
           updatedAt
         }
+        content
         comments {
           nextToken
         }
+        upvote
+        downvote
         createdAt
         updatedAt
-        blogPostsId
+        channelPostsId
       }
       content
       createdAt
