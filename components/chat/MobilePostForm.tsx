@@ -33,6 +33,7 @@ const MobilePostForm = () => {
       clipPath: 'circle(141% at 50% 100%)',
       transition: {
         duration: 0.3,
+        ease: 'circOut',
         staggerChildren: 1,
       },
     },
