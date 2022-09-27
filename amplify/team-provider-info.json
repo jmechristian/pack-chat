@@ -1,31 +1,15 @@
 {
-  "dev": {
+  "staging": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-packchat-dev-94905-authRole",
-      "UnauthRoleArn": "arn:aws:iam::552673436980:role/amplify-packchat-dev-94905-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::552673436980:role/amplify-packchat-dev-94905-authRole",
+      "AuthRoleName": "amplify-pschat-staging-33038-authRole",
+      "UnauthRoleArn": "arn:aws:iam::552673436980:role/amplify-pschat-staging-33038-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::552673436980:role/amplify-pschat-staging-33038-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-packchat-dev-94905-deployment",
-      "UnauthRoleName": "amplify-packchat-dev-94905-unauthRole",
-      "StackName": "amplify-packchat-dev-94905",
-      "StackId": "arn:aws:cloudformation:us-east-1:552673436980:stack/amplify-packchat-dev-94905/fd1d7ab0-3da1-11ed-86e3-0e49b356150b",
-      "AmplifyAppId": "dt7ec3p34yv9z"
-    },
-    "categories": {
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "dt7ec3p34yv9z",
-          "type": "manual"
-        }
-      },
-      "auth": {
-        "packchat48f4ff21": {
-          "userPoolId": "us-east-1_4Yl6EqJIx",
-          "userPoolName": "packchat",
-          "webClientId": "1033p574cvdm37mgjfpi6kipva",
-          "nativeClientId": "1033p574cvdm37mgjfpi6kipva"
-        }
-      }
+      "DeploymentBucketName": "amplify-pschat-staging-33038-deployment",
+      "UnauthRoleName": "amplify-pschat-staging-33038-unauthRole",
+      "StackName": "amplify-pschat-staging-33038",
+      "StackId": "arn:aws:cloudformation:us-east-1:552673436980:stack/amplify-pschat-staging-33038/c1dd5790-3e14-11ed-9194-1289a5d5799f",
+      "AmplifyAppId": "d3uw6dm360oqaw"
     }
   }
 }

@@ -10,9 +10,6 @@ export const getChannel = /* GraphQL */ `
         items {
           id
           title
-          content
-          upvote
-          downvote
           createdAt
           updatedAt
           channelPostsId
@@ -58,7 +55,6 @@ export const getPost = /* GraphQL */ `
         createdAt
         updatedAt
       }
-      content
       comments {
         items {
           id
@@ -69,8 +65,6 @@ export const getPost = /* GraphQL */ `
         }
         nextToken
       }
-      upvote
-      downvote
       createdAt
       updatedAt
       channelPostsId
@@ -93,12 +87,9 @@ export const listPosts = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        content
         comments {
           nextToken
         }
-        upvote
-        downvote
         createdAt
         updatedAt
         channelPostsId
@@ -120,12 +111,9 @@ export const getComment = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        content
         comments {
           nextToken
         }
-        upvote
-        downvote
         createdAt
         updatedAt
         channelPostsId
@@ -149,9 +137,6 @@ export const listComments = /* GraphQL */ `
         post {
           id
           title
-          content
-          upvote
-          downvote
           createdAt
           updatedAt
           channelPostsId

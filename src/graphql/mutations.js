@@ -13,9 +13,6 @@ export const createChannel = /* GraphQL */ `
         items {
           id
           title
-          content
-          upvote
-          downvote
           createdAt
           updatedAt
           channelPostsId
@@ -39,9 +36,6 @@ export const updateChannel = /* GraphQL */ `
         items {
           id
           title
-          content
-          upvote
-          downvote
           createdAt
           updatedAt
           channelPostsId
@@ -65,9 +59,6 @@ export const deleteChannel = /* GraphQL */ `
         items {
           id
           title
-          content
-          upvote
-          downvote
           createdAt
           updatedAt
           channelPostsId
@@ -96,7 +87,6 @@ export const createPost = /* GraphQL */ `
         createdAt
         updatedAt
       }
-      content
       comments {
         items {
           id
@@ -107,8 +97,6 @@ export const createPost = /* GraphQL */ `
         }
         nextToken
       }
-      upvote
-      downvote
       createdAt
       updatedAt
       channelPostsId
@@ -132,7 +120,6 @@ export const updatePost = /* GraphQL */ `
         createdAt
         updatedAt
       }
-      content
       comments {
         items {
           id
@@ -143,8 +130,6 @@ export const updatePost = /* GraphQL */ `
         }
         nextToken
       }
-      upvote
-      downvote
       createdAt
       updatedAt
       channelPostsId
@@ -168,7 +153,6 @@ export const deletePost = /* GraphQL */ `
         createdAt
         updatedAt
       }
-      content
       comments {
         items {
           id
@@ -179,8 +163,6 @@ export const deletePost = /* GraphQL */ `
         }
         nextToken
       }
-      upvote
-      downvote
       createdAt
       updatedAt
       channelPostsId
@@ -203,12 +185,9 @@ export const createComment = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        content
         comments {
           nextToken
         }
-        upvote
-        downvote
         createdAt
         updatedAt
         channelPostsId
@@ -236,12 +215,9 @@ export const updateComment = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        content
         comments {
           nextToken
         }
-        upvote
-        downvote
         createdAt
         updatedAt
         channelPostsId
@@ -269,12 +245,9 @@ export const deleteComment = /* GraphQL */ `
           createdAt
           updatedAt
         }
-        content
         comments {
           nextToken
         }
-        upvote
-        downvote
         createdAt
         updatedAt
         channelPostsId
